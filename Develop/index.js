@@ -1,8 +1,9 @@
 // Include packages needed for this application
+const fs = require('fs');
 const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
 const questions = [
-    // README Title
+    // README User Input Questions
     {
         type: "input",
         name: "title",
@@ -11,27 +12,27 @@ const questions = [
     {
         type: "input",
         name: "description",
-        mesasge: "Enter a description:",
+        message: "Enter a description:",
     },
     {
         type: "input",
         name: "install",
-        mesasge: "Enter install information:",
+        message: "Enter install information:",
     },
     {
         type: "input",
         name: "usageInfo",
-        mesasge: "Enter usage information:",
+        message: "Enter usage information:",
     },
     {
         type: "input",
         name: "contribution",
-        mesasge: "Enter contribution guidelines:",
+        message: "Enter contribution guidelines:",
     },
     {
         type: "input",
         name: "testInstructions",
-        mesasge: "Enter testing instructions:",
+        message: "Enter testing instructions:",
     },
     {
         type: "checkbox",
@@ -46,15 +47,38 @@ const questions = [
             "Microsoft Public License",
             "MIT",
             "Mozilla Public License 2.0"
-        ]
+        ],
     },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        console.log('Data has been written to the file successfully')
+    })
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        const fileName = 'README.md'
+        const data = `# ${answers.title}\n${answers.description}
+        \n\n## Table of Contents
+        \n- Installation
+        \n- Usage Information
+        \n- Contribution Guidelines
+        \n- Testing Instructions
+        \n\n## Installation\n${answers.install}
+        \n\n## Usage Information\n${answers.usageInfo}
+        \n\n## Contribution Guidlines\n${answers.contribution}
+        \n\nTesting Instructins\n${answers.testInstructions}`
+        writeToFile(fileName, data)
+    });
+};
 
 // Function call to initialize app
 init();
