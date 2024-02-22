@@ -1,6 +1,7 @@
 // Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const axios = require('axios');
 const generateMarkdown = require('generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [
@@ -40,9 +41,6 @@ const questions = [
         name: "license",
         message: "Choose a license:",
         choices: [
-            "Academic Free License 3.0",
-            "Creative Commons license family",
-            "Microsoft Public License",
             "MIT",
         ],
     },
