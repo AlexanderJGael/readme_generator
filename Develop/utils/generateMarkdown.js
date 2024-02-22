@@ -40,7 +40,27 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (!license) {
+    return '';
+  }
+
+  let licenseURL = '';
+  switch (license) {
+    case 'Academix Free License 3.0':
+      licenseURL = 'https://opensource.org/license/afl-3-0-php'
+      break;
+    case 'Creative Commons license family':
+      licenseURL = 'https://creativecommons.org/share-your-work/cclicenses/'
+      break;
+    case 'Microsoft Public License':
+      licenseURL = 'https://opensource.org/license/ms-pl-html'
+      break;
+    case 'MIT':
+      licenseURL = 'https://opensource.org/license/mit'
+      break;
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
