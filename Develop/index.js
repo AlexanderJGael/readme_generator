@@ -1,6 +1,7 @@
 // Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [
     // README User Input Questions
@@ -40,13 +41,9 @@ const questions = [
         message: "Choose a license:",
         choices: [
             "Academic Free License 3.0",
-            "Artistic License 2.0",
             "Creative Commons license family",
-            "Creative Commons Attribution 4.0",
-            "Do What the F*ck You Want to Public License",
             "Microsoft Public License",
             "MIT",
-            "Mozilla Public License 2.0"
         ],
     },
 ];
@@ -64,18 +61,9 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((answers) => {
+    inquirer.prompt(questions).then((data) => {
         const fileName = 'README.md'
-        const data = `# ${answers.title}\n${answers.description}
-        \n\n## Table of Contents
-        \n- Installation
-        \n- Usage Information
-        \n- Contribution Guidelines
-        \n- Testing Instructions
-        \n\n## Installation\n${answers.install}
-        \n\n## Usage Information\n${answers.usageInfo}
-        \n\n## Contribution Guidlines\n${answers.contribution}
-        \n\nTesting Instructins\n${answers.testInstructions}`
+
         writeToFile(fileName, data)
     });
 };
