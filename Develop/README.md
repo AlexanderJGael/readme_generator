@@ -19,11 +19,9 @@ This is a command-line application that generates a high-quality, professional R
 ## Installation
 To install the necessary dependencies, run the following command:
 
-## Usage Information
-To use the application, follow these steps:
 `npm i inquirer`
 
-## Contribution Guidelines
+## Usage Information
 To use the application, follow these steps:
 
 1. Clone the respository to your local machine.
@@ -31,6 +29,9 @@ To use the application, follow these steps:
 3. Run the application by executing the command `node index.js` or `node .`
 4. Follow the prompts to enter the information about your project.
 
+
+## Contribution Guidelines
+Contributions are welcome! If you would like to contribute to this project, please fork the repository and submit a pull request.
 
 ## Questions
 For any additional questions, feel free to [reach out via email](${data.email}) or visit [My GitHub profile](https://github.com/${data.github})
