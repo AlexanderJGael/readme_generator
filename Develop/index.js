@@ -11,6 +11,11 @@ const questions = [
         message: "Enter a title for your README:",
     },
     {
+        type: 'input',
+        name: 'demo',
+        message: 'link or path to image or video'
+    }
+    {
         type: "input",
         name: "description",
         message: "Enter a description:",

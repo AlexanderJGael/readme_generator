@@ -41,12 +41,15 @@ ${renderLicenseBadge(data.license)}
 \n${data.description}
 
 ## Table of Contents
+- [Application Demo](#-application-demo)
 - [Installation](#-installation)
 - [Usage Information](#-usage-information)
 - [Contribution Guidelines](#-contribution-guidelines)
 - [Testing Instructions](#-testing-instructions)
 - [Questions](#questions)
 - [License](#license)
+
+## Application Demo
 
 ## Installation
 ${data.install}
@@ -61,7 +64,7 @@ ${data.contribution}
 ${data.testInstructions}
 
 ## Questions
-For any additional questions: [GitHub](https://github.com/${data.github}) | [Email](alexanderjgael@gmail.com)
+For any additional questions, feel free to [reach out via email](${data.email}) or visit [My GitHub profile](https://github.com/${data.github})
 
 ## License
 ${renderLicenseSection(data.license)}`
