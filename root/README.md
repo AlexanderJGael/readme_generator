@@ -6,8 +6,8 @@ This is a command-line application that generates a high-quality, professional R
 
 ## Table of Contents
 - [App Demo](#-app-demo)
-- [Installation](#-installation)
 - [Usage Information](#-usage-information)
+- [Installation](#-installation)
 - [Contribution Guidelines](#-contribution-guidelines)
 - [Testing Instructions](#-testing-instructions)
 - [Questions](#questions)
@@ -17,9 +17,13 @@ This is a command-line application that generates a high-quality, professional R
 ![App Demo](#)
 
 ## Installation
-To install the necessary dependencies, run the following command:
+Clone the repository to your local machine:
 
-`npm i inquirer`
+>`git clone https://github.com/alexanderjgael/readme_generator`
+
+`cd` to your local directory and run:
+
+>`npm i inquirer`
 
 ## Usage Information
 To use the application, follow these steps:
@@ -29,12 +33,11 @@ To use the application, follow these steps:
 3. Run the application by executing the command `node index.js` or `node .`
 4. Follow the prompts to enter the information about your project.
 
-
 ## Contribution Guidelines
 Contributions are welcome! If you would like to contribute to this project, please fork the repository and submit a pull request.
 
 ## Questions
-For any additional questions, feel free to [reach out via email](${data.email}) or visit [My GitHub profile](https://github.com/${data.github})
+For any additional questions, feel free to [reach out via email](${data.email}) or visit [my GitHub profile](https://github.com/${data.github})
 
 ## License
 Full license information can be found [here](https://opensource.org/license/mit)

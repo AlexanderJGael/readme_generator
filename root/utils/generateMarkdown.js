@@ -51,11 +51,11 @@ ${renderLicenseBadge(data.license)}
 
 ## Application Demo
 
-## Installation
-${data.install}
-
 ## Usage Information
 ${data.usageInfo}
+
+## Installation
+${data.install}
 
 ## Contribution Guidelines
 ${data.contribution}
