@@ -2,10 +2,16 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   const licenseMap = {
-    'MIT': 'https://img.shields.io/badge/License-mit-blue'
+    'MIT': 'https://img.shields.io/badge/LICENSE-MIT-green.png'
   };
 
-  return licenseMap[license] || '';
+  const badgeLink = licenseMap[license] || '';
+
+  if (badgeLink) {
+    return `![License Badge](${badgeLink})`;
+  } else {
+    return '';
+  }
 };
 
 // TODO: Create a function that returns the license link
@@ -35,26 +41,33 @@ ${renderLicenseBadge(data.license)}
 ${data.description}
 
 ## Table of Contents
-- Installation
-- Usage Information
-- Contribution Guidelines
-- Testing Instructions
--License
+- [Installation)[#install]
+- [Usage Information](#usage)
+- [Contribution Guidelines](#contribute)
+- [Testing Instructions](#test)
+- [Questions](#query)
+- [License](#license)
 
-## Installation
+## Installation {#install}
 ${data.install}
 
-## Usage Information
+## Usage Information {#usage}
 ${data.usageInfo}
 
-## Contribution Guidelines
+## Contribution Guidelines {#contribute}
 ${data.contribution}
 
-## Testing Instructions
+## Testing Instructions {#test}
 ${data.testInstructions}
 
-## License
+## Questions {#query}
+${data.github}
+
+For any addittional questions or feedback you can reach me at ${data.email}
+
+## License {#license}
 ${renderLicenseSection(data.license)}`
-}
+};
+
 
 module.exports = generateMarkdown;

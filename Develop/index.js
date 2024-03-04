@@ -1,7 +1,6 @@
 // Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const axios = require('axios');
 const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [
@@ -44,6 +43,16 @@ const questions = [
             "MIT",
         ],
     },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub username:',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email:',
+    }
 ];
 
 // TODO: Create a function to write README file
