@@ -14,7 +14,7 @@ This is a command-line application that generates a high-quality, professional R
 - [License](#license)
 
 ## App Demo
-![App Demo](#)
+![App Demo](https://github.com/AlexanderJGael/readme_generator/blob/9b3bf5c2778cc53a5ae971ad896366271e61940a/assets/video/app_demo.mov)
 
 ## Installation
 Clone the repository to your local machine:
