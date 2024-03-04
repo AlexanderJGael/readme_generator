@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   const licenseMap = {
@@ -14,8 +14,8 @@ function renderLicenseBadge(license) {
   }
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// function that returns the license link
+// if there is no license, return an empty string
 function renderLicenseLink(license) {
   const licenseURLs = {
     'MIT': 'https://opensource.org/license/mit'
@@ -24,48 +24,46 @@ function renderLicenseLink(license) {
   return licenseURLs[license] || '';
 };
 
-// TODO: Create a function that returns the license section of README
+// function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   const licenseSection = {
-    'MIT': `MIT License\n\n${renderLicenseLink(license)}\n\n${renderLicenseBadge(license)}`
+    'MIT': `Full license information can be found [here](${renderLicenseLink(license)})`
   }
 
   return licenseSection[license] || '';
 }
 
-// TODO: Create a function to generate markdown for README
+// function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.title}\n
 ${renderLicenseBadge(data.license)}
-${data.description}
+\n${data.description}
 
 ## Table of Contents
-- [Installation)[#install]
-- [Usage Information](#usage)
-- [Contribution Guidelines](#contribute)
-- [Testing Instructions](#test)
-- [Questions](#query)
+- [Installation](#-installation)
+- [Usage Information](#-usage-information)
+- [Contribution Guidelines](#-contribution-guidelines)
+- [Testing Instructions](#-testing-instructions)
+- [Questions](#questions)
 - [License](#license)
 
-## Installation {#install}
+## Installation
 ${data.install}
 
-## Usage Information {#usage}
+## Usage Information
 ${data.usageInfo}
 
-## Contribution Guidelines {#contribute}
+## Contribution Guidelines
 ${data.contribution}
 
-## Testing Instructions {#test}
+## Testing Instructions
 ${data.testInstructions}
 
-## Questions {#query}
-${data.github}
+## Questions
+For any additional questions: [GitHub](https://github.com/${data.github}) | [Email](alexanderjgael@gmail.com)
 
-For any addittional questions or feedback you can reach me at ${data.email}
-
-## License {#license}
+## License
 ${renderLicenseSection(data.license)}`
 };
 
