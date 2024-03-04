@@ -1,34 +1,42 @@
-# Example
+# CLI README Generator
 
 ![License Badge](https://img.shields.io/badge/LICENSE-MIT-green.png)
 
-This is a demonstration of the readme generator
+This is a command-line application that generates a high-quality, professional README.md file for your project repository. The generated README includes sections such as Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions.
 
 ## Table of Contents
-- [Application Demo](#-application-demo)
-- [Installation](#-installation)
+- [App Demo](#-app-demo)
 - [Usage Information](#-usage-information)
+- [Installation](#-installation)
 - [Contribution Guidelines](#-contribution-guidelines)
 - [Testing Instructions](#-testing-instructions)
 - [Questions](#questions)
 - [License](#license)
 
-## Application Demo
-
-## Usage Information
-clone this repo
+## App Demo
+![App Demo](#)
 
 ## Installation
-npm i inquirer
+Clone the repository to your local machine:
+
+>`git clone https://github.com/alexanderjgael/readme_generator`
+`cd` to your local `/readme_generator` directory and run:
+
+>`npm i inquirer`
+
+## Usage Information
+To use the application, follow these steps:
+
+1. Clone the respository to your local machine.
+2. Naviagte to the root directory of the project.
+3. Run the application by executing the command `node index.js` or `node .`
+4. Follow the prompts to enter the information about your project.
 
 ## Contribution Guidelines
-please contribute on a new fork!
-
-## Testing Instructions
-n/a
+Contributions are welcome! If you would like to contribute to this project, please fork the repository and submit a pull request.
 
 ## Questions
-For any additional questions, feel free to [reach out via email](alexanderjgael@gmail.com) or visit [My GitHub profile](https://github.com/alexanderjgael)
+For any additional questions, feel free to [reach out via email](${data.email}) or visit [my GitHub profile](https://github.com/${data.github})
 
 ## License
 Full license information can be found [here](https://opensource.org/license/mit)
