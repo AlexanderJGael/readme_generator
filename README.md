@@ -19,8 +19,8 @@ This is a command-line application that generates a high-quality, professional R
 ## Installation
 Clone the repository to your local machine:
 
->`git clone https://github.com/alexanderjgael/readme_generator`
 `cd` to your local `/readme_generator` directory and run:
+>`git clone https://github.com/alexanderjgael/readme_generator`
 
 >`npm i inquirer`
 
