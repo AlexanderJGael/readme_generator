@@ -21,7 +21,7 @@ Clone the repository to your local machine:
 
 >`git clone https://github.com/alexanderjgael/readme_generator`
 
-`cd` to your local directory and run:
+`cd` to your local `/readme_generator` directory and run:
 
 >`npm i inquirer`
 

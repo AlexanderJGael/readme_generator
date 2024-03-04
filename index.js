@@ -14,7 +14,7 @@ const questions = [
         type: 'input',
         name: 'demo',
         message: 'link or path to image or video'
-    }
+    },
     {
         type: "input",
         name: "description",
